@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Health Check-Up</title>
+    <style></style>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>On-Care</h1>
+
+    <div id="name-question" class="question">
+      <p>What is your name?</p>
+      <input type="text" name="name" />
+      <br />
+      <p>enter your email id</p>
+      <input type="text" name="name" />
+      <p>password</p>
+      <input type="text" name="name" />
+      <button class="button" onclick="showagequestion()">login</button>
+    </div>
+
+    <div id="age-question" class="question">
+      <p>What is your age?</p>
+      <input type="text" name="age" />
+      <button class="button" onclick="showheightquestion()">Next</button>
+    </div>
+    <div id="height-question" class="question">
+      <p>What is your height?</p>
+      <input type="text" name="age" />
+      <button class="button" onclick="showweightquestion()">Next</button>
+    </div>
+    <div id="weight-question" class="question">
+      <p>What is your weight?</p>
+      <input type="text" name="age" />
+      <button class="button" onclick="showpreexistingquestion()">Next</button>
+    </div>
+    <div id="pre-existing-question" class="question">
+      <p>Do you have any pre-existing medical conditions?</p>
+      <input type="radio" name="pre-medical-conditions" value="yes" />Yes
+      <input type="radio" name="pre-medical-conditions" value="no" />No
+
+      <p>Do you have a family history of any medical conditions?</p>
+      <input type="radio" name="family-history" value="yes" />Yes
+      <input type="radio" name="family-history" value="no" />No
+
+      <button class="button" onclick="showconcernquestion()">NEXT</button>
+    </div>
+    <div id="concern-question" class="question">
+      <p>Do you have any history of underlying medical conditions?</p>
+      <input type="radio" name="medical_condition" value="yes" />Yes
+      <input type="radio" name="medical_condition" value="no" />No
+      <br />
+      <p>Do you have a history of regular exercise?</p>
+      <input type="radio" name="exercise" value="yes" />Yes
+      <input type="radio" name="exercise" value="no" />No
+      <br />
+      <p>Do you have a history of smoking?</p>
+      <input type="radio" name="smoking" value="yes" />Yes
+      <input type="radio" name="smoking" value="no" />No
+      <button class="button" onclick="fq1()">Next</button>
+    </div>
+
+    <div id="qq1" class="question">
+      <p>irritating eyes ?</p>
+      <input type="radio" name="q1" value="yes" />YES
+      <input type="radio" name="q1" value="no" />NO
+      <button class="button" onclick="fq2()">Next</button>
+    </div>
+    <div id="qq2" class="question">
+      <p>itching in eyes ?</p>
+      <input type="radio" name="q2" value="yes" />YES
+      <input type="radio" name="q2" value="no" />NO
+      <button class="button" onclick="fq3()">Next</button>
+    </div>
+    <div id="qq3" class="question">
+      <p>tearing and burning sensation in eyes ?</p>
+      <input type="radio" name="q3" value="yes" />YES
+      <input type="radio" name="q3" value="no" />NO
+      <button class="button" onclick="fq4()">Next</button>
+    </div>
+    <div id="qq4" class="question">
+      <p>pink or reddy eyes ?</p>
+      <input type="radio" name="q4" value="yes" />YES
+      <input type="radio" name="q4" value="no" />NO
+      <button class="button" onclick="fq5()">Next</button>
+    </div>
+    <div id="qq5" class="question">
+      <p>pasted and sheated eyes when waking up ?</p>
+      <input type="radio" name="q5" value="yes" />YES
+      <input type="radio" name="q5" value="no" />NO
+      <button class="button" onclick="fq6()">Next</button>
+    </div>
+    <div id="qq6" class="question">
+      <p>high temprature or fewer of about 100 degree and + ?</p>
+      <input type="radio" name="q6" value="yes" />YES
+      <input type="radio" name="q6" value="no" />NO
+      <button class="button" onclick="fq7()">Next</button>
+    </div>
+    <div id="qq7" class="question">
+      <p>sore throat and cough ?</p>
+      <input type="radio" name="q7" value="yes" />YES
+      <input type="radio" name="q7" value="no" />NO
+      <button class="button" onclick="fq8()">Next</button>
+    </div>
+    <div id="qq8" class="question">
+      <p>sneezing , runny and stiffy nose ?</p>
+      <input type="radio" name="q8" value="yes" />YES
+      <input type="radio" name="q8" value="no" />NO
+      <button class="button" onclick="fq9()">Next</button>
+    </div>
+    <div id="qq9" class="question">
+      <p>headache ?</p>
+      <input type="radio" name="q9" value="yes" />YES
+      <input type="radio" name="q9" value="no" />NO
+      <button class="button" onclick="fq10()">Next</button>
+    </div>
+    <div id="qq10" class="question">
+      <p>puffy wattery eyes ?</p>
+      <input type="radio" name="q10" value="yes" />YES
+      <input type="radio" name="q10" value="no" />NO
+      <button class="button" onclick="fq11()">Next</button>
+    </div>
+    <div id="qq11" class="question">
+      <p>skin rashes ?</p>
+      <input type="radio" name="q11" value="yes" />YES
+      <input type="radio" name="q11" value="no" />NO
+      <button class="button" onclick="fq12()">Next</button>
+    </div>
+    <div id="qq12" class="question">
+      <p>difficulty in breathing ?</p>
+      <input type="radio" name="q12" value="yes" />YES
+      <input type="radio" name="q12" value="no" />NO
+      <button class="button" onclick="fq13()">Next</button>
+    </div>
+
+    <div id="qq13" class="question">
+      <p>sensation of fainting ?</p>
+      <input type="radio" name="q13" value="yes" />YES
+      <input type="radio" name="q13" value="no" />NO
+      <button class="button" onclick="fq14()">Next</button>
+    </div>
+    <div id="qq14" class="question">
+      <p>wattery loose stools ?</p>
+      <input type="radio" name="q14" value="yes" />YES
+      <input type="radio" name="q14" value="no" />NO
+      <button class="button" onclick="fq15()">Next</button>
+    </div>
+    <div id="qq15" class="question">
+      <p>Frequent bowl movement ( stomach movement) ?</p>
+      <input type="radio" name="q15" value="yes" />YES
+      <input type="radio" name="q15" value="no" />NO
+      <button class="button" onclick="fq16()">Next</button>
+    </div>
+    <div id="qq16" class="question">
+      <p>abdominal pain ?</p>
+      <input type="radio" name="q16" value="yes" />YES
+      <input type="radio" name="q16" value="no" />NO
+      <button class="button" onclick="fq17()">Next</button>
+    </div>
+    <div id="qq17" class="question">
+      <p>intense pain on one side of head ?</p>
+      <input type="radio" name="q17" value="yes" />YES
+      <input type="radio" name="q17" value="no" />NO
+      <button class="button" onclick="fq18()">Next</button>
+    </div>
+    <div id="qq18" class="question">
+      <p>constant dull aching in head ?</p>
+      <input type="radio" name="q18" value="yes" />YES
+      <input type="radio" name="q18" value="no" />NO
+      <button class="button" onclick="fq19()">Next</button>
+    </div>
+    <div id="qq19" class="question">
+      <p>a feeling of sqeezing or pressure ?</p>
+      <input type="radio" name="q19" value="yes" />YES
+      <input type="radio" name="q19" value="no" />NO
+      <button class="button" onclick="fq20()">Next</button>
+    </div>
+    <div id="qq20" class="question">
+      <p>vomiting ?</p>
+      <input type="radio" name="q20" value="yes" />YES
+      <input type="radio" name="q20" value="no" />NO
+      <button class="button" onclick="fq21()">Next</button>
+    </div>
+    <div id="qq21" class="question">
+      <p>aching , stabbing ,burning ,twisting , dull cramping and gnawing ?</p>
+      <input type="radio" name="q21" value="yes" />YES
+      <input type="radio" name="q21" value="no" />NO
+      <button class="button" onclick="fq22()">Next</button>
+    </div>
+    <div id="qq22" class="question">
+      <p>higher age excessisive thirst and urrinating ?</p>
+      <input type="radio" name="q22" value="yes" />YES
+      <input type="radio" name="q22" value="no" />NO
+      <button class="button" onclick="fq23()">Next</button>
+    </div>
+    <div id="qq23" class="question">
+      <p>Fatigue ?</p>
+      <input type="radio" name="q23" value="yes" />YES
+      <input type="radio" name="q23" value="no" />NO
+      <button class="button" onclick="fq24()">Next</button>
+    </div>
+    <div id="qq24" class="question">
+      <p>weight loss ?</p>
+      <input type="radio" name="q24" value="yes" />YES
+      <input type="radio" name="q24" value="no" />NO
+      <button class="button" onclick="fq25()">Next</button>
+    </div>
+    <div id="qq25" class="question">
+      <p>blurred vision ?</p>
+      <input type="radio" name="q25" value="yes" />YES
+      <input type="radio" name="q25" value="no" />NO
+      <button class="button" onclick="fq26()">Next</button>
+    </div>
+    <div id="qq26" class="question">
+      <p>restlessness ?</p>
+      <input type="radio" name="q26" value="yes" />YES
+      <input type="radio" name="q26" value="no" />NO
+      <button class="button" onclick="fq27()">Next</button>
+    </div>
+    <div id="qq27" class="question">
+      <p>a sense of dread ?</p>
+      <input type="radio" name="q27" value="yes" />YES
+      <input type="radio" name="q27" value="no" />NO
+      <button class="button" onclick="fq28()">Next</button>
+    </div>
+    <div id="qq28" class="question">
+      <p>feeling constantly on edge ?</p>
+      <input type="radio" name="q28" value="yes" />YES
+      <input type="radio" name="q28" value="no" />NO
+      <button class="button" onclick="fq29()">Next</button>
+    </div>
+    <div id="qq29" class="question">
+      <p>irritability ?</p>
+      <input type="radio" name="q29" value="yes" />YES
+      <input type="radio" name="q29" value="no" />NO
+      <button class="button" onclick="fq30()">Next</button>
+    </div>
+    <div id="qq30" class="question">
+      <p>difficulty in concentration ?</p>
+      <input type="radio" name="q30" value="yes" />YES
+      <input type="radio" name="q30" value="no" />NO
+      <button class="button" onclick="fq31()">Next</button>
+    </div>
+    <div id="qq31" class="question">
+      <p>weezing (a wistling sound when breathing ) ?</p>
+      <input type="radio" name="q31" value="yes" />YES
+      <input type="radio" name="q31" value="no" />NO
+      <button class="button" onclick="fq32()">Next</button>
+    </div>
+    <div id="qq32" class="question">
+      <p>shortness of breath ?</p>
+      <input type="radio" name="q32" value="yes" />YES
+      <input type="radio" name="q32" value="no" />NO
+      <button class="button" onclick="fq33()">Next</button>
+    </div>
+    <div id="qq33" class="question">
+      <p>a tight chest which may feel like a bind is thightning around?</p>
+      <input type="radio" name="q33" value="yes" />YES
+      <input type="radio" name="q33" value="no" />NO
+      <button class="button" onclick="fq34()">Next</button>
+    </div>
+    <div id="qq34" class="question">
+      <p>coughing ?</p>
+      <input type="radio" name="q34" value="yes" />YES
+      <input type="radio" name="q34" value="no" />NO
+      <button class="button" onclick="thankyou()">Next</button>
+    </div>
+    <div id="tq" class="question">
+      <p>THanks for answering the question set</p>
+      <button class="button" onclick="output()">solution</button>
+    </div>
+    <div id="smoking" class="question">
+      <p>
+        smoking being injurious to health must be prevented <br />here are a few
+        steps that will help you quit smoking <br />1. Try nicotine replacement
+        therapy <br />2. Avoid triggers <br />3. Delay <br />4. Try relaxation
+        techniques <br />5. Remind yourself of the benefits <br />6. Don't have
+        'just one'
+      </p>
+    </div>
+    <div id="exercise" class="question">
+      <p>
+        start addopting your body around some daily exercise<br />
+        here are few ways you can start your exercise journey<br />
+        Piece your workout together. You don't need to get all your exercise at
+        one time<br />
+        Exercise with a friend<br />
+        Keep it brisk<br />
+        Move your feet before you eat<br />
+        Try a pedometer<br />
+        Turn off the TV, computer, and smart phone<br />
+        Turn sit time into fit time<br />
+        Sign up for a class .
+      </p>
+    </div>
+    <div id="medical-condition" class="question">
+      <p>
+        in case of underlying medical-conditions you should keep in touch with
+        your regular doctor
+      </p>
+    </div>
+    <div id="caution" class="question">
+      <p>
+        * Disclaimer * <br />The below prescribed medications are for first aid
+        use only, it is always recommended to go visit a physician personally
+        for a prescription and dosage recommendations. NO SELF MEDICATION
+        recommended .<br />
+        ALL MEDICINES MUST BE TAKEN ON PRESCRIPTION OF A QUALIDFIED MEDICAL
+        PRACTITIONER <br />
+      </p>
+    </div>
+    <div id="conj" class="question">
+      <p>
+        you show symptoms for CONJUCTIVITIS<br />
+        few suggested medication are :-<br />
+        ITONE<br />
+        CHLOAMPHENICOL<br />
+        NEOMYCIN<br />
+        NESOPORIN<br />
+        ZENTAMYCIN EYE DROP <br />
+      </p>
+    </div>
+    <div id="cnf" class="question">
+      <p>
+        you show symptoms for clod and flu<br />
+        few suggested medication are:-<br />
+        MONTAIR LC<br />
+        COLDREX<br />
+        CETRIZIN<br />
+        ANTIOTICS-<br />
+        MOX<br />
+        CLAVUM<br />
+        PARACETAMOL<br />
+        DIPHENHYDRAMINE HCL<br />
+      </p>
+    </div>
+    <div id="alergies" class="question">
+      <p>
+        you show symptoms for alergies<br />
+        few suggested medication are:-<br />
+        ALLEGRA<br />
+        AVIL 25<br />
+        CETRIZINE<br />
+        LEVOCETRIZINE<br />
+        PHENIRAMINE MALEATE<br />
+      </p>
+    </div>
+    <div id="diarrhea" class="question">
+      <p>
+        you show symptoms for diarrhea<br />
+        few suggested medication are:-<br />
+        METRONIDAZOL<br />
+        NORFLOXACIN<br />
+        OFLOXACIN<br />
+        NORFLOX TZ<br />
+        DEPENDAL<br />
+        ORS<br />
+      </p>
+    </div>
+    <div id="migrain" class="question">
+      <p>
+        you show symptoms for migrain<br />
+        few suggested medication are:-<br />
+        SARIDON<br />
+        NOVALGIN<br />
+        STOPACHE<br />
+        DISPRIN<br />
+        PARACETAMOL<br />
+        ASPIRIN<br />
+      </p>
+    </div>
+    <div id="sa" class="question">
+      <p>
+        you show symptoms for stomach-ache<br />
+        few suggested medication are:-<br />
+        BUSCOPAN<br />
+        KAOPECTATE<br />
+        SCOPEX TABLETS<br />
+      </p>
+    </div>
+    <div id="diabetes" class="question">
+      <p>
+        you show symptoms for diabetes<br />
+        few suggested medication are:-<br />
+        GLUCOMET<br />
+        GLYCIPHAGE<br />
+        AMRYL<br />
+        METFORMIN<br />
+        GLIPIZIDE<br />
+      </p>
+    </div>
+    <div id="anxiety" class="question">
+      <p>
+        you show symptoms for anxiety<br />
+        few suggested medication are:-<br />
+        SERTRALINE<br />
+        ESCITALOPRAM<br />
+        ETIZOLA<br />
+        SOLOPOSE PLUS<br />
+      </p>
+    </div>
+    <div id="asthama" class="question">
+      <p>you show symptoms for asthama</p>
+      few suggested medication are:-<br />
+      BUDECORT<br />
+      ASTHALIN<br />
+      FLUTICASONE<br />
+      SALBUTAMOL<br />
+      BUDENOSIDE<br />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
